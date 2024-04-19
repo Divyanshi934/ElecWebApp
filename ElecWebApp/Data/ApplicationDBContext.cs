@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ElecWebApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ElecWebApp.Data
 {
@@ -8,5 +9,6 @@ namespace ElecWebApp.Data
         {
             
         }
+        public DbSet<Category> Categories { get; set; } //Categories table will be created in DB
     }
 }
