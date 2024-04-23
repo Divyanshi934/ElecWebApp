@@ -1,5 +1,8 @@
-﻿<h1> Elec Web Application</h1>
-<table class=" =table table-bordered table-striped">
+﻿@model List<Category>
+
+<h1> Elec Web Application</h1>
+<table class="table table-bordered table-striped">
+    <thead>
     <tr>
         <th>
             Category Name
@@ -8,4 +11,15 @@
             Display Order
         </th>
     </tr>
+
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>@obj.Name</td>
+                <td>@obj.DisplayOrder</td>
+            </tr>
+        }
+    </tbody>
 </table>
